@@ -16,11 +16,12 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "pl.marcinbialecki.rest.app.mvc")
+@ComponentScan(basePackages = {"pl.marcinbialecki.rest.app.mvc", "pl.marcinbialecki.rest.core"})
 public class RestApplicationConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // Configure Swagger UI
         registry.addResourceHandler("swagger-ui.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
 
@@ -39,4 +40,5 @@ public class RestApplicationConfig extends WebMvcConfigurerAdapter {
     public ViewResolver viewResolver() {
         return new BeanNameViewResolver();
     }
+
 }
