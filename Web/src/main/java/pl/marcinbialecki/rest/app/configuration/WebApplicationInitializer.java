@@ -14,7 +14,7 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {RestApplicationConfig.class, SwaggerConfig.class};
+        return new Class[] {RestApplicationConfig.class, SwaggerConfig.class, ApplicationSecurityConfig.class};
     }
 
     @Override

@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * Created by Marcin Białecki on 2016-05-11.
+ *
+ * Annotation used to mark method for log execution time.
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.CLASS)

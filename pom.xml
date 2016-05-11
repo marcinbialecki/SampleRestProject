@@ -19,6 +19,7 @@
 
         <!-- Spring framework version -->
         <spring.framework.version>4.2.6.RELEASE</spring.framework.version>
+        <spring.security.version>4.1.0.RELEASE</spring.security.version>
 
         <!-- Servlet version -->
         <javax.servlet.api.version>3.1.0</javax.servlet.api.version>
@@ -35,6 +36,9 @@
 
         <!-- AspectJ version -->
         <aspectj.version>1.6.11</aspectj.version>
+
+        <!-- Lombok version -->
+        <lombok.version>1.14.2</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +63,16 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
                 <version>${spring.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring.security.version}</version>
             </dependency>
 
             <!-- AspectJ -->
@@ -109,6 +123,14 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+
+            <!-- Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
 
         </dependencies>
